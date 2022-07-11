@@ -36,7 +36,7 @@ namespace Box
             }
 
             //return $"{typeof(T)}: {Element}";
-            return sb.ToString();
+            return sb.ToString().TrimEnd();
         }
 
     }

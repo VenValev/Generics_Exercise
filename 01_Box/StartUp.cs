@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Box
 {
@@ -8,15 +9,24 @@ namespace Box
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            //var listBox = new List<Box>();
+            var listBox = new List<string>();
             for(int i = 0; i < n; i++)
             {
                 string s = Console.ReadLine();
 
-                var box = new Box<string>(s);
-
-                Console.WriteLine(box);
+                listBox.Add(s);
             }
+
+            var box = new Box<string>(listBox);
+
+            int[] indexes = Console.ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .ToArray();
+
+            box.Swap(listBox, indexes[0], indexes[1]);
+
+            Console.WriteLine(box);
         }
     }
 }

@@ -4,9 +4,19 @@ using System.Text;
 
 namespace Box
 {
-    public class Box
+    public class Box<T>
     {
+        public Box(T element)
+        {
+            Element = element;
+        }
 
+        public T Element { get; set; }
+
+        public override string ToString()
+        {
+            return $"{typeof(T)}: {Element}";
+        }
 
     }
 }

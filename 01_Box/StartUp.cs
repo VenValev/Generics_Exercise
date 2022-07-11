@@ -9,7 +9,7 @@ namespace Box
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            var listBox = new List<int>();
+            /*var listBox = new List<int>();
             for(int i = 0; i < n; i++)
             {
                 int s = int.Parse(Console.ReadLine());
@@ -26,7 +26,20 @@ namespace Box
 
             box.Swap(listBox, indexes[0], indexes[1]);
 
-            Console.WriteLine(box);
+            Console.WriteLine(box);*/
+
+            List<string> list = new List<string>();
+
+            for(int i = 0; i < n; i++)
+            {
+                list.Add(Console.ReadLine());
+            }
+
+            var box = new Box<string>(list);
+            var element = Console.ReadLine();
+            var count = box.CountElements(list, element);
+            Console.WriteLine(count);
+
         }
     }
 }

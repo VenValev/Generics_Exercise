@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Box
 {
@@ -7,12 +8,12 @@ namespace Box
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-
+            //var listBox = new List<Box>();
             for(int i = 0; i < n; i++)
             {
-                int s = int.Parse(Console.ReadLine());
+                string s = Console.ReadLine();
 
-                var box = new Box<int>(s);
+                var box = new Box<string>(s);
 
                 Console.WriteLine(box);
             }

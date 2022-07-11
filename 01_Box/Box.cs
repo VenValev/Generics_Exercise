@@ -29,7 +29,14 @@ namespace Box
         }
         public override string ToString()
         {
-            return $"{typeof(T)}: {Element}";
+            StringBuilder sb = new StringBuilder();
+            foreach(T element in Elements)
+            {
+                sb.AppendLine($"{element.GetType()}: {element}");
+            }
+
+            //return $"{typeof(T)}: {Element}";
+            return sb.ToString();
         }
 
     }

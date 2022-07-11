@@ -10,9 +10,9 @@ namespace Box
 
             for(int i = 0; i < n; i++)
             {
-                string s = Console.ReadLine();
+                int s = int.Parse(Console.ReadLine());
 
-                var box = new Box<string>(s);
+                var box = new Box<int>(s);
 
                 Console.WriteLine(box);
             }

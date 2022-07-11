@@ -28,15 +28,15 @@ namespace Box
 
             Console.WriteLine(box);*/
 
-            List<string> list = new List<string>();
+            List<double> list = new List<double>();
 
             for(int i = 0; i < n; i++)
             {
-                list.Add(Console.ReadLine());
+                list.Add(double.Parse(Console.ReadLine()));
             }
 
-            var box = new Box<string>(list);
-            var element = Console.ReadLine();
+            var box = new Box<double>(list);
+            var element = double.Parse(Console.ReadLine());
             var count = box.CountElements(list, element);
             Console.WriteLine(count);
 

@@ -11,6 +11,10 @@ namespace Box
             for(int i = 0; i < n; i++)
             {
                 string s = Console.ReadLine();
+
+                var box = new Box<string>(s);
+
+                Console.WriteLine(box);
             }
         }
     }
